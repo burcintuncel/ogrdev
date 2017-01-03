@@ -1,9 +1,9 @@
 <?php
-$host      = "localhost";
-$kullanici = "root";
-$sifre     = "";
-$baglanti = mysql_connect( $host, $kullanici, $sifre )
-or die("HATA : " . mysql_error());
-mysql_select_db( 'veritabanim', $baglanti )
-or die("HATA : " . mysql_error());
-?>
+
+
+$vt = new mysqli('localhost', 'root', '');
+if($vt->connect_errno) {
+    echo 'Mysqli bağlantı hatası: ' . $vt->connect_errno;
+
+
+  ?>
